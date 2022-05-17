@@ -63,8 +63,8 @@ def import_track(file_path: str,
 
     # check minimum track width for vehicle width plus a small safety margin
     w_tr_min = np.amin(reftrack_imp[:, 2] + reftrack_imp[:, 3])
-
-    if w_tr_min < width_veh + 0.5:
+#
+    if w_tr_min < width_veh: #  + 0.5:
         print("WARNING: Minimum track width %.2fm is close to or smaller than vehicle width!" % np.amin(w_tr_min))
 
     return reftrack_imp
